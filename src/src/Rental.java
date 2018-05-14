@@ -17,11 +17,11 @@ class Rental {
 		return movie;
 	}
 
-	double calculateRentingCost() {
+	public double calculateRentingCost() {
 		return getMovie().getPriceCode().calculateRentingCost(daysRented);
 	}
 
-	int getFrequentRenterPoints() {
+	public int getFrequentRenterPoints() {
 		int frequentRenterPoints = 1;
 		if (isEligibleForNewReleaseBonus()) {
 			frequentRenterPoints++;
