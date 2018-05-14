@@ -22,7 +22,7 @@ public class PriceCodeTest {
 	}
 
 	@Test
-	public void regularCosts3_50for3Days() throws Exception {
+	public void regularCosts3point5for3Days() throws Exception {
 		double rentingCost = PriceCode.REGULAR.calculateRentingCost(3);
 		Assert.assertThat(rentingCost, is(3.5));
 	}
@@ -42,7 +42,7 @@ public class PriceCodeTest {
 	}
 
 	@Test
-	public void childrensCosts1_50forTheFirstThreeDays() throws Exception {
+	public void childrensCosts1point5forTheFirstThreeDays() throws Exception {
 		for (int day = 1; day <= 3; day++) {
 			double rentingCost = PriceCode.CHILDRENS.calculateRentingCost(day);
 			Assert.assertThat(rentingCost, is(1.5));
@@ -50,7 +50,7 @@ public class PriceCodeTest {
 	}
 
 	@Test
-	public void childrensCosts1_50perDayStartingAtDay4() throws Exception {
+	public void childrensCosts1point5perDayStartingAtDay4() throws Exception {
 		double rentingCost = PriceCode.CHILDRENS.calculateRentingCost(4);
 		Assert.assertThat(rentingCost, is(3.0));
 	}
