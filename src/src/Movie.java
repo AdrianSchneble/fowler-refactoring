@@ -1,3 +1,4 @@
+package src;
 public class Movie {
 	private String title;
 	private PriceCode priceCode;
